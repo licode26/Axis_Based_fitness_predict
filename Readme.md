@@ -1,1 +1,4 @@
-hii my name is prithwiraj this is my hackthon project.
+### Hackathon Project
+
+#####
+Sport and fitness tracker using ML.
