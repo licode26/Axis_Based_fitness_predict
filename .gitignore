@@ -1,5 +1,5 @@
-./venv
-./vscode
-./__pycache__
-./venv
-./hintrc
+/venv
+/.vscode
+/__pycache__
+/.venv
+/.hintrc
