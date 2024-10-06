@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <style>
+        body {
+            background-image: url('{{ url_for('static', filename='images/bmicalc.jpg') }}');
+            background:black;
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 120vh;
+            margin: 0;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.7);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        .container h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .container button {
+            width: 100%;
+            padding: 10px;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        .container button:hover {
+            background-color: dodgerblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>BMI Calculator</h1>
+        <form action="{{ url_for('calculate') }}" method="post">
+            <input type="number" id="height" name="height" placeholder="Height in meters" step="0.1" required>
+            <input type="number" id="weight" name="weight" placeholder="Weight in kg" required>
+            <button type="submit">Calculate BMI</button>
+        </form>
+    </div>
+</body>
+</html>

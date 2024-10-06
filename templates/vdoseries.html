@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIF Gallery</title>
+    <style>
+        /* Basic reset */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        /* Background image */
+        body {
+            background-image: url('{{ url_for('static', filename='images/exercise.jpg') }}');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed; /* Ensure the image stays fixed */
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Make sure it covers the viewport height */
+        }
+
+        /* Centered container for gallery */
+        .gif-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Container for each GIF */
+        .gif-container {
+            flex-basis: 24%; /* Adjust based on your preference */
+            margin: 10px;
+            border: 3px solid #000;
+            padding: 10px;
+            box-sizing: border-box;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+            border-radius: 10px; /* Rounded corners */
+        }
+
+        /* GIF image styling */
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Heading styling */
+        h2 {
+            font-size: 1.2em;
+            margin: 0 0 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <main class="gif-gallery">
+        <section class="gif-container">
+            <h2>PUSH-UPS</h2>
+            <img src="{{ url_for('static', filename='images/full-push-up.gif') }}" alt="Push-Ups">
+        </section>
+        <section class="gif-container">
+            <h2>SQUATS</h2>
+            <img src="{{ url_for('static', filename='images/squats.gif') }}" alt="Squats">
+        </section>
+        <section class="gif-container">
+            <h2>BENCH PRESS</h2>
+            <img src="{{ url_for('static', filename='images/benchpress.gif') }}" alt="Bench Press">
+        </section>
+        <section class="gif-container">
+            <h2>PULL-UPS</h2>
+            <img src="{{ url_for('static', filename='images/pullups.gif') }}" alt="Pull-Ups">
+        </section>
+        <section class="gif-container">
+            <h2>LUNGES</h2>
+            <img src="{{ url_for('static', filename='images/lunges.gif') }}" alt="Lunges">
+        </section>
+        <section class="gif-container">
+            <h2>HAMMER CURLS</h2>
+            <img src="{{ url_for('static', filename='images/hammercurl.gif') }}" alt="Hammer Curls">
+        </section>
+        <section class="gif-container">
+            <h2>PLANKS</h2>
+            <img src="{{ url_for('static', filename='images/planks.gif') }}" alt="Planks">
+        </section>
+        <section class="gif-container">
+            <h2>CALF RAISES</h2>
+            <img src="{{ url_for('static', filename='images/calfraises.gif') }}" alt="Calf Raises">
+        </section>
+        <section class="gif-container">
+            <h2>CRUNCHES</h2>
+            <img src="{{ url_for('static', filename='images/crunches.gif') }}" alt="Crunches">
+        </section>
+    </main>
+</body>
+</html>

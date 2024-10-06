@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    background: url("https://static.vecteezy.com/system/resources/previews/028/822/883/non_2x/dark-and-blue-concreate-and-cement-wall-to-present-product-and-background-generative-ai-free-photo.jpg");
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+}
+
+.block {
+    background-color: rgb(27, 119, 145);
+    padding: 50px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 60%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+
+.block:hover {
+    transform: scale(1.05);
+}
+
+h2 {
+    margin-top: 0;
+    color:white;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Hub</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="sports-container">
+        <h1 class="title">Welcome to the Sports Hub!</h1>
+        <div class="sports-list">
+            <a href="{{ url_for('football') }}" class="sport-card">Football</a>
+            <a href="{{ url_for('basketball') }}" class="sport-card">Basketball</a>
+            <a href="{{ url_for('tennis') }}" class="sport-card">Tennis</a>
+            <a href="{{ url_for('cricket') }}" class="sport-card">Cricket</a>
+            <a href="{{ url_for('run') }}" class="sport-card">Running</a>
+            <a href="{{ url_for('swimming') }}" class="sport-card">Swimming</a>
+            <a href="{{ url_for('cycling') }}" class="sport-card">Cycling</a>
+            <a href="{{ url_for('javelin') }}" class="sport-card">Javelin Throw</a>
+            <!-- Add more sports here -->
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+    <button onclick="window.location.href='{{ url_for('index') }}'" class="back-button">Back to Dashboard</button>
+</body>
+</html>
+

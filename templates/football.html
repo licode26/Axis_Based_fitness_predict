@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Exercises</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <!-- Background Video -->
+
+    <!-- Content Wrapper -->
+    <div class="content">
+        <h1>Football Exercises</h1>
+        <div class="exercise-list">
+            <a href="{{ url_for('run') }}" class="exercise">Running</a>
+            <a href="{{ url_for('lunges') }}" class="exercise">Lunges</a>
+            <a href="{{ url_for('squats') }}" class="exercise">Squats</a>
+            <a href="{{ url_for('shooting_drills') }}" class="exercise">Shooting Drills</a>
+            <a href="{{ url_for('endurance_training') }}" class="exercise">Endurance Training</a>
+        </div>
+    </div>
+</body>
+</html>

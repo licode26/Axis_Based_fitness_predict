@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background-color: #34495e;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+nav {
+    background-color: #2c3e50;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.bmi-section {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.bmi-section h2 {
+    color: #2980b9;
+    margin-bottom: 10px;
+}
+
+.bmi-section p {
+    color: #7f8c8d;
+    font-size: 1.1em;
+}
+
+.bmi-section ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.bmi-section ul li {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #ecf0f1;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.bmi-section ul li strong {
+    color: #2980b9;
+}

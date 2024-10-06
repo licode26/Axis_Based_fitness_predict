@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15-Day Workout Plan</title>
+    <style>
+        body {
+            background-color: #f0f4f7;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+        }
+        .workout-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 50px;
+        }
+        .workout-day {
+            background-color: #ffdd57;
+            color: #333;
+            border-radius: 8px;
+            width: 150px;
+            margin: 15px;
+            padding: 20px;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .workout-day:hover {
+            transform: scale(1.1);
+            background-color: #f0a500;
+        }
+        .animated-gif {
+            margin-top: 30px;
+            width: 200px;
+            animation: uniqueAnimation 5s infinite;
+        }
+        @keyframes uniqueAnimation {
+            0% {
+                transform: scale(1) rotate(0deg);
+                filter: hue-rotate(0deg);
+            }
+            25% {
+                transform: scale(1.1) rotate(10deg);
+                filter: hue-rotate(45deg);
+            }
+            50% {
+                transform: scale(1) rotate(0deg);
+                filter: hue-rotate(0deg);
+            }
+            75% {
+                transform: scale(1.1) rotate(-10deg);
+                filter: hue-rotate(-45deg);
+            }
+            100% {
+                transform: scale(1) rotate(0deg);
+                filter: hue-rotate(0deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>15-Day Workout Plan</h1>
+    <div class="workout-container">
+        <!-- Repeat the below block for each day -->
+        <div class="workout-day" onclick="location.href='{{ url_for('day1') }}'">Day 1</div>
+        <div class="workout-day" onclick="location.href='{{ url_for('day2') }}'">Day 2</div>
+        <div class="workout-day" onclick="location.href='{{ url_for('day3') }}'">Day 3</div>
+        <!-- Add more days up to Day 15 -->
+        <div class="workout-day" onclick="location.href='{{ url_for('day4') }}'">Day 4</div>
+        <div class="workout-day" onclick="location.href='{{ url_for('day5') }}'">Day 5</div>
+        <div class="workout-day" onclick="location.href='{{ url_for('day6') }}'">Day 6</div>
+        <div class="workout-day" onclick="location.href='{{ url_for('day7') }}'">Day 7</div>
+        <div class="workout-day" onclick="location.href='{{ url_for('day8') }}'">Day 8</div>
+        <div class="workout-day" onclick="location.href='{{ url_for('day9') }}'">Day 9</div>
+        <div class="workout-day" onclick="location.href='{{ url_for('day10') }}'">Day 10</div>
+        <div class="workout-day" onclick="location.href='{{ url_for('day11') }}'">Day 11</div>
+        <div class="workout-day" onclick="location.href='{{ url_for('day12') }}'">Day 12</div>
+        <div class="workout-day" onclick="location.href='{{ url_for('day13') }}'">Day 13</div>
+        <div class="workout-day" onclick="location.href='{{ url_for('day14') }}'">Day 14</div>
+        <div class="workout-day" onclick="location.href='{{ url_for('day15') }}'">Day 15</div>
+    </div>
+
+    <!-- Adding the GIF with custom animation at the bottom -->
+    <img src="{{ url_for('static', filename='images/ex.gif') }}" alt="Motivational GIF" class="animated-gif">
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 4 Workout</title>
+    <style>
+        body {
+            background-color: #e0f7fa;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+        .exercise-container {
+            max-width: 600px;
+            margin: auto;
+        }
+        .exercise {
+            margin-bottom: 30px;
+            padding: 15px;
+            border: 2px solid #009688;
+            border-radius: 10px;
+            background-color: #ffffff;
+            animation: fadeIn 1s ease-in-out;
+            position: relative; /* Added for button positioning */
+        }
+        .exercise img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        .btn-workout {
+            background: linear-gradient(45deg, #ff6f61, #ffeb3b);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 16px;
+            position: absolute;
+            bottom: 15px; /* Adjust as needed */
+            left: 50%;
+            transform: translateX(-50%);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        .btn-workout:hover {
+            transform: translateX(-50%) scale(1.1);
+            background: linear-gradient(45deg, #ff5722, #ffeb3b);
+        }
+        .btn-workout:focus {
+            outline: none;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body>
+    <h2>Day 4 Workout</h2>
+    <div class="exercise-container">
+        <div class="exercise">
+            <h3>Exercise 1: Warm-up</h3>
+            <img src="runn.jpg" alt="warm-up">
+            <p>Light running at least 600 meters</p>
+            <a href="warmup.html" class="btn-workout">Let's Workout</a>
+        </div>
+        <div class="exercise">
+            <h3>Exercise 2: Squats</h3>
+            <img src="squats.jpg" alt="squats">
+            <p>3 sets of 20 reps</p>
+            <a href="squats.html" class="btn-workout">Let's Workout</a>
+        </div>
+        <div class="exercise">
+            <h3>Exercise 3: Push-Up</h3>
+            <img src="pushups.jpg" alt="push-ups">
+            <p>8-10 push-ups within 5 minutes</p>
+            <a href="pushups.html" class="btn-workout">Let's Workout</a>
+        </div>
+        <div class="exercise">
+            <h3>Exercise 4: Lunges</h3>
+            <img src="lunges.jpg" alt="lunges">
+            <p>Make 15 x 4 lunges within 5 minutes</p>
+            <a href="lunges.html" class="btn-workout">Let's Workout</a>
+        </div>
+        <div class="exercise">
+            <h3>Exercise 5: Pull-up</h3>
+            <img src="pullup.jpg" alt="pull-ups">
+            <p>At least 5 x 5 pull-ups within 5 minutes</p>
+            <a href="pullup.html" class="btn-workout">Let's Workout</a>
+        </div>
+
+        <!-- Add more exercises as needed -->
+    </div>
+
+    <button onclick="location.href='index.html'">Back to Workout Plan</button>
+    <img src="daa4.jpg" alt="Day 1" class="day-image">
+</body>
+</html>

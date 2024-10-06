@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Blocks Example</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/nutricss.css') }}">
+</head>
+<body>
+    <div id="main-content" class="container">
+        <div id="nutrition-block" class="block" onclick="window.location.href='{{ url_for('fteen') }}'">
+            <h2>TEEN</h2>
+            <p>Details about Nutrition and Exercise will go here.</p>
+        </div>
+        <div id="exercises-block" class="block" onclick="window.location.href='{{ url_for('fadult') }}'">
+            <h2>ADULT</h2>
+            <p>Details about Nutrition and exercises will go here.</p>
+        </div>
+        <div id="pregnant-block" class="block" onclick="window.location.href='{{ url_for('preg') }}'">
+            <h2>PREGNANT LADY</h2>
+            <p>Details about Nutrition and exercises will go here.</p>
+        </div>
+    </div>
+    <button onclick="window.location.href='{{ url_for('index') }}'" class="back-button">Back to Dashboard</button>
+</body>
+<script>
+function showNutrition() {
+    const mainContent = document.getElementById('main-content');
+    mainContent.innerHTML = `
+        <div class="block">
+            <h2>Nutrition Details Underweight</h2>
+            <button onclick="goto()">Show details</button>
+            <button onclick="window.location.href='{{ url_for('female_category') }}'" class="back-button">Back</button>
+        </div>
+    `;
+}
+
+function goBack() {
+    location.reload(); // Reloads the page to go back to the original blocks
+}
+</script>
+</html>

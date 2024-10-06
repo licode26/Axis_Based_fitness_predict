@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health and Fitness</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/under.css') }}">
+</head>
+<body>
+    <div class="container">
+        <a href="{{ url_for('under_nutrition') }}" class="block-link">
+            <div class="block" id="nutrition">
+                <h2>Protein and Nutrition</h2>
+                <img src="{{ url_for('static', filename='images/undernutri.jpeg') }}" alt="Protein and Nutrition" class="block-image">
+                <p>Learn about balanced diets, proteins, and nutrition for a healthy lifestyle.</p>
+            </div>
+        </a>
+
+        <a href="{{ url_for('under_exercises') }}" class="block-link">
+            <div class="block" id="exercises">
+                <h2>Exercises</h2>
+                <img src="{{ url_for('static', filename='images/underimage.jpg') }}" alt="Exercises" class="block-image">
+                <p>Explore different exercises to stay fit, including squats, bench press, and more.</p>
+            </div>
+        </a>
+    </div>
+
+    
+</body>
+</html>

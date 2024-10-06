@@ -1,0 +1,531 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Importing Font Families */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Background Video */
+#background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    filter: brightness(50%);
+}
+
+/* Navigation Buttons at the Top */
+.top-buttons {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.top-buttons button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid white;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.top-buttons button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+/* Team Name Animation */
+.team-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.team-name h1 {
+    font-size: 4rem;
+    animation: textAnimation 3s ease-in-out infinite alternate;
+    background: linear-gradient(45deg, #00ff99, #ff0066, #6600ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Text Animation */
+@keyframes textAnimation {
+    0% {
+        letter-spacing: 0.5rem;
+        transform: scale(1);
+    }
+    100% {
+        letter-spacing: 1.5rem;
+        transform: scale(1.1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .top-buttons button {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
+    }
+
+    .team-name h1 {
+        font-size: 3rem;
+    }
+}
+/* Login Container */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.login-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    animation: fadeInDown 1s ease-out;
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 80%;
+    max-width: 400px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.login-container form input {
+    padding: 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.login-container form input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.login-container form button {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    background-color: rgba(255, 69, 0, 0.8);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.login-container form button:hover {
+    background-color: rgba(255, 69, 0, 1);
+    transform: scale(1.05);
+}
+
+.back-button {
+    margin-top: 2rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.back-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Logo and Team Name Container */
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    font-family: 'Montserrat', sans-serif;
+    animation: fadeIn 2s ease-out;
+    overflow: hidden;
+}
+
+.animated-logo {
+    width: 150px; /* Adjust the size of the logo */
+    height: auto;
+    margin-bottom: 1rem;
+    animation: rotateScale 5s infinite; /* Rotate and Scale animation */
+}
+
+/* Text Styling */
+.animated-text {
+    font-size: 3rem;
+    margin-top: 0.5rem;
+    background: linear-gradient(45deg, #00ff99, #ff0066, #6600ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textGlow 2s ease-in-out infinite alternate;
+}
+
+/* Rotate and Scale Animation for Logo */
+@keyframes rotateScale {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        transform: rotate(180deg) scale(1.2); /* Rotate halfway and enlarge */
+    }
+    100% {
+        transform: rotate(360deg) scale(1); /* Complete rotation and return to original size */
+    }
+}
+
+/* Animation for Text Glow Effect */
+@keyframes textGlow {
+    0% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6);
+    }
+    100% {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 0.8);
+    }
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+/* Dropdown Menu Styling */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #ff7f50; /* Coral color for a premium feel */
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transition for hover effects */
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.dropbtn:hover {
+    background-color: #ff6347; /* Slightly darker coral for hover effect */
+    transform: translateY(-2px); /* Subtle lift animation */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff; /* White background for dropdown */
+    min-width: 220px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); /* Premium box shadow */
+    border-radius: 10px;
+    z-index: 1;
+    animation: dropdown-animation 0.3s ease-out; /* Animation for dropdown appearance */
+    overflow: hidden; /* Ensures the border radius is respected */
+}
+
+.dropdown-content a {
+    color: #333; /* Dark grey text for premium look */
+    padding: 14px 20px;
+    text-decoration: none;
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s ease, padding-left 0.3s ease; /* Smooth hover effect */
+}
+
+.dropdown-content a:hover {
+    background-color: #ffe4e1; /* Light coral hover effect */
+    color: #ff4500; /* Darker orange text color on hover */
+    padding-left: 24px; /* Animation to move text on hover */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Dropdown Animation */
+@keyframes dropdown-animation {
+    from {
+        opacity: 0;
+        transform: translateY(-10px); /* Starts slightly above */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Ends at normal position */
+    }
+}
+
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.sports-container {
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.title {
+    font-size: 3.5rem;
+    color: #ffffff;
+    margin-bottom: 2rem;
+    animation: slideInFromTop 1.5s ease-out;
+    text-shadow: 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff;
+}
+
+.sports-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.sport-card {
+    display: inline-block;
+    padding: 20px 40px;
+    margin: 10px;
+    background: linear-gradient(135deg, #ff0099, #493240);
+    color: #fff;
+    font-size: 1.8rem;
+    text-decoration: none;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(255, 0, 150, 0.4), 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.sport-card:hover {
+    transform: translateY(-10px) scale(1.1);
+    box-shadow: 0 20px 40px rgba(255, 0, 150, 0.7), 0 20px 40px rgba(0, 0, 0, 0.4);
+    animation: pulse 1s infinite;
+}
+
+.sport-card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3), transparent);
+    transform: rotate(30deg);
+    animation: moveLight 5s infinite linear;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideInFromTop {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+@keyframes moveLight {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Position workout blocks on the left side */
+.left-container {
+    position: absolute;
+    top: 120px; /* Adjusted to be below the navigation and logo */
+    left: 20px; /* Align to the left side */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 2; /* Ensure blocks appear above the video background */
+}
+
+.block {
+    width: 250px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Light background to match black and white theme */
+    border: 1px solid #333; /* Dark border for contrast */
+    color: #333; /* Dark text */
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    animation: slideUp 1s ease;
+}
+
+.block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Adjust logo and text */
+.logo-container {
+    position: relative;
+    z-index: 2;
+    margin-top: 10px; /* Adjust space to prevent overlap */
+}
+
+.animated-text {
+    color: white;
+    z-index: 3;
+}
+
+
+
+/* Basic Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Background Video */
+#bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+
+/* Content Styling */
+.content {
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.exercise-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Exercise Buttons */
+.exercise {
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.exercise:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    transform: scale(1.1);
+    border-radius: 5px;
+    animation: glow 1.5s infinite alternate;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes glow {
+    from { box-shadow: 0 0 10px rgba(255, 255, 255, 0.7); }
+    to { box-shadow: 0 0 20px rgba(255, 255, 255, 1); }
+}
+

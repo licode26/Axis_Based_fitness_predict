@@ -1,0 +1,54 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+.container {
+    width: 80%;
+    height: 500px;
+    background-image: url('https://www.bing.com/th/id/OGC.e7b7499382a2da72628947dfabb1c2a7?pid=1.7&rurl=https%3a%2f%2fgifdb.com%2fimages%2fhigh%2fsumo-squat-fitness-exercise-n6u6p6djb7qdu6pc.gif&ehk=%2bD75nT58hl67dsYXVE68CyFzzLy0e0713XEctlrX4qg%3d'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid #000;
+    box-sizing: border-box;
+}
+
+.centered-heading {
+    font-size: 2em;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border: 2px solid white;
+    text-align: center;
+}
+
+.text-below {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #333;
+    text-align: center;
+}
+
+.action-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.action-button:hover {
+    background-color: #0056b3;
+}

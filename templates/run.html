@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Background with Centered Heading and Text Below</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/run.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="centered-heading">THIS IS THE DEMO VIDEO BEFORE YOU START</h1>
+    </div>
+    <div class="text-below">
+        <p>RUNNING</p>
+        <!-- Button that triggers the Flask route 'start_run' -->
+       <a href="C:\Users\charc\Music\hackathon\Running.py"> 
+        <button class="action-button" onclick="window.location.href='{{ url_for('start_run') }}'">START</button></a>
+    </div>
+</body>
+</html>

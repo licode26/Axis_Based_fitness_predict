@@ -1,0 +1,118 @@
+/* General body styling */
+body {
+    background-color: #2a2e35; /* Light grey background */
+    font-family: 'Roboto', sans-serif; /* Modern font */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-y: auto; /* Allow vertical scrolling */
+}
+
+/* Main container styling */
+main {
+    width: 100%;
+    max-width: 1200px; /* Maximum width for the main content */
+    padding: 20px;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+
+/* Additional CSS for Well Done Interface */
+.well-done {
+    background-color: #ffffff; /* White background */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px;
+    text-align: center;
+    margin: 20px;
+}
+
+.hidden {
+    display: none; /* Hide the Well Done interface initially */
+}
+
+
+/* Exercise section styling */
+.exercise {
+    background-color: #4a6b64; /* White background for each exercise block */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-bottom: 20px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition effects */
+}
+
+.exercise:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+/* Image styling */
+.exercise img {
+    width: 100%; /* Full width */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 300px; /* Maximum height to prevent excessive image size */
+    object-fit: contain; /* Ensure the image is fully visible and maintains aspect ratio */
+    border-radius: 8px; /* Rounded corners */
+    margin-bottom: 15px;
+    border: 1px solid #ddd; /* Light border for better visibility */
+}
+
+/* Button styling */
+button {
+    background-color: #007bff; /* Blue background */
+    border: none;
+    border-radius: 8px; /* Rounded corners */
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px;
+    padding: 10px 20px;
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition effects */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+button:active {
+    transform: scale(0.95); /* Slight shrink effect when clicked */
+}
+
+/* Timer styling */
+.timer {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333; /* Darker text color for contrast */
+    margin-top: 10px;
+}
+
+/* Music player styling */
+.music-player {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.music-player label {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.music-player select {
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.music-player audio {
+    margin-top: 10px;
+    width: 100%; /* Responsive audio player */
+    max-width: 400px; /* Maximum width for the audio player */
+}

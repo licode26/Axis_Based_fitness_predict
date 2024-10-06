@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 1 Workout</title>
+    <style>
+        body {
+            background-color: #e0f7fa;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+        .exercise-container {
+            max-width: 600px;
+            margin: auto;
+        }
+        .exercise {
+            margin-bottom: 30px;
+            padding: 15px;
+            border: 2px solid #009688;
+            border-radius: 10px;
+            background-color: #ffffff;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .exercise img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        .motivational-gif {
+            width: 100%;
+            max-width: 300px;
+            margin-top: 20px;
+            border-radius: 10px;
+            animation: bounce 2s infinite;
+        }
+        .day-image {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 150px;
+        }
+        
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body>
+    <h2>Day 14 Workout</h2>
+    <div class="exercise-container">
+        <div class="exercise">
+            <h3>Exercise 2: Running</h3>
+            <img src="runn.jpg" alt="squats">
+            <p>make a run of 1km with in 20 minutes</p>
+        </div>
+        <div class="exercise">
+            <h3>Exercise 2: Pull-up</h3>
+            <img src="pullup.jpg" alt="squats">
+            <p> atleast 5 x 5 pull up with in 5 minutes</p>
+        </div>
+        <div class="exercise">
+            <h3>Exercise 1: Warm-up</h3>
+            <img src="runn.jpg" alt="warm-up">
+            <p>Light running at least 600 meters</p>
+        </div>
+        
+        <div class="exercise">
+            <h3>Exercise 2: Push-Up</h3>
+            <img src="pushups.jpg" alt="squats">
+            <p>8-10 push-ups with in 5 minutes</p>
+        </div>
+        <div class="exercise">
+            <h3>Exercise 2: lunges</h3>
+            <img src="lunges.jpg" alt="squats">
+            <p>make 15 x 4 lunges with in 5 minutes</p>
+        </div>
+       
+
+        <!-- Add more exercises as needed -->
+    </div>
+    
+    
+   
+
+    <button onclick="location.href='index.html'">Back to Workout Plan</button>
+    <img src="daa1.webp" alt="Day 1" class="day-image">
+</body>
+</html>

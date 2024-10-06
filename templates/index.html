@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports & Fitness Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}"> <!-- Updated CSS path -->
+    <!-- Importing Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="logo-container">
+        <img src="{{ url_for('static', filename='images/logo.jpg') }}" alt="FitnessHackers Logo" class="animated-logo"> <!-- Updated image path -->
+        <h1 class="animated-text">We are FitnessHacker  </h1>
+        <h1 class="animated-text">Get In For More Features</h1>
+    </div>
+    <!-- Background Video -->
+    <video autoplay muted loop id="background-video">
+        <source src="{{ url_for('static', filename='images/hk5.mp4') }}" type="video/mp4"> <!-- Updated video path -->
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Navigation Buttons at the Top -->
+    <nav class="top-buttons">
+        <button onclick="navigateTo('{{ url_for('bmi') }}')">CHECK_THE_ BMI</button>
+        <button onclick="navigateTo('{{ url_for('video_series') }}')">Video Series</button>
+        <button onclick="navigateTo('{{ url_for('mind1') }}')">Mind</button>
+        <button onclick="navigateTo('{{ url_for('feed') }}')">Feedback</button>
+        <button onclick="navigateTo('{{ url_for('login') }}')">Login / Sign Up</button>
+    </nav>
+
+    <script>
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>

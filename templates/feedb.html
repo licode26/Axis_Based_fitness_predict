@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <style>
+        /* General reset for better consistency across browsers */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            padding: 30px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            color: #333;
+            font-size: 14px;
+            margin-bottom: 8px;
+            text-align: left;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        textarea {
+            resize: none;
+            height: 100px;
+        }
+
+        button {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .error {
+            color: red;
+            margin-bottom: 10px;
+            font-size: 14px;
+            display: none;
+        }
+
+        .success {
+            color: green;
+            margin-bottom: 10px;
+            font-size: 14px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Feedback Form</h2>
+
+        <!-- Display error or success message -->
+        <div class="error" id="errorMsg">Please fill out all fields.</div>
+        <div class="success" id="successMsg">Feedback sent successfully!</div>
+
+        <!-- Feedback form -->
+        <form id="feedbackForm" action="/feedback" method="POST" onsubmit="return validateForm()">
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="message">Your Feedback:</label>
+            <textarea id="message" name="message" placeholder="Enter your feedback" required></textarea>
+
+            <button type="submit">Send Feedback</button>
+        </form>
+    </div>
+
+    <script>
+        // JavaScript form validation
+        function validateForm() {
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+            var errorMsg = document.getElementById('errorMsg');
+            var successMsg = document.getElementById('successMsg');
+
+            if (email == "" || message == "") {
+                errorMsg.style.display = "block";
+                successMsg.style.display = "none";
+                return false;
+            } else {
+                errorMsg.style.display = "none";
+                successMsg.style.display = "block";
+                return true;
+            }
+        }
+    </script>
+</body>
+</html>

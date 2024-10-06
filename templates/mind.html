@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mind Exercises for Concentration</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/mind.css') }}">
+</head>
+<body>
+    <main>
+        <!-- Focused Breathing Exercise -->
+        <section class="exercise" id="focused-breathing">
+            <h2>Focused Breathing</h2>
+            <img src="{{ url_for('static', filename='images/breathing.jpg') }}" alt="Focused Breathing Image">
+            <p>Close your eyes and focus on your breathing. Inhale deeply through your nose and exhale through your mouth. Try to concentrate solely on the sensation of breathing.</p>
+            <button id="focused-breathing-start" onclick="startExercise('focused-breathing', 5)">Start Exercise</button>
+            <button id="focused-breathing-stop" onclick="stopExercise('focused-breathing')">Stop Exercise</button>
+            <p id="focused-breathing-instructions"></p>
+            <div id="focused-breathing-timer" class="timer">00:00</div>
+        </section>
+        
+
+        <!-- Visualization Exercise -->
+        <section class="exercise" id="visualization">
+            <h2>Visualization</h2>
+            <img src="{{ url_for('static', filename='images/visual.jpeg') }}" alt="Visualization Image">
+            <p>Close your eyes and visualize a detailed scene or object. Engage all your senses in the imagery.</p>
+            <button onclick="startExercise('visualization', 5)">Start Exercise</button>
+            <button onclick="stopExercise('visualization')">Stop Exercise</button>
+            <p id="visualization-instructions"></p>
+            <div id="visualization-timer" class="timer">00:00</div>
+        </section>
+
+        <!-- Progressive Muscle Relaxation Exercise -->
+        <section class="exercise" id="muscle-relaxation">
+            <h2>Progressive Muscle Relaxation</h2>
+            <img src="{{ url_for('static', filename='images/mus.jpeg') }}" alt="Muscle Relaxation Image">
+            <p>Tense and then relax different muscle groups starting from your toes and working up to your head.</p>
+            <button onclick="startExercise('muscle-relaxation', 10)">Start Exercise</button>
+            <button onclick="stopExercise('muscle-relaxation')">Stop Exercise</button>
+            <p id="muscle-relaxation-instructions"></p>
+            <div id="muscle-relaxation-timer" class="timer">00:00</div>
+        </section>
+
+        <!-- Single-Tasking Practice Exercise -->
+        <section class="exercise" id="single-tasking">
+            <h2>Single-Tasking Practice</h2>
+            <img src="{{ url_for('static', filename='images/lsrw.jpeg') }}" alt="Single-Tasking Image">
+            <p>Focus on a single task, such as reading or writing, without any distractions. Set a timer for 15 minutes and concentrate solely on that task.</p>
+            <button onclick="startExercise('single-tasking', 15)">Start Exercise</button>
+            <button onclick="stopExercise('single-tasking')">Stop Exercise</button>
+            <p id="single-tasking-instructions"></p>
+            <div id="single-tasking-timer" class="timer">00:00</div>
+        </section>
+
+        <!-- Mental Math Exercise -->
+        <section class="exercise" id="mental-math">
+            <h2>Mental Math</h2>
+            <img src="{{ url_for('static', filename='images/math.jpeg') }}" alt="Mental Math Image">
+            <p>Perform arithmetic calculations in your head. Try solving simple math problems mentally.</p>
+            <button onclick="startExercise('mental-math', 10)">Start Exercise</button>
+            <button onclick="stopExercise('mental-math')">Stop Exercise</button>
+            <p id="mental-math-instructions"></p>
+            <div id="mental-math-timer" class="timer">00:00</div>
+        </section>
+
+        <!-- Music Player -->
+        <div class="music-player">
+            <label for="music-select">Select Music:</label>
+            <select id="music-select" onchange="changeMusic()">
+                <option value="peaceful">Peaceful Music</option>
+                <option value="silent">Silent</option>
+            </select>
+            <audio id="audio-player" controls>
+                <source id="audio-source" src="{{ url_for('static', filename='audio/peaceful-music.mp3') }}" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+        <div id="well-done" class="well-done hidden">
+            <h2>Well Done!</h2>
+            <p>Congratulations on completing your exercise!</p>
+            <button onclick="goBack()">Back to Exercises</button>
+        </div>
+    </main>
+    <script src="{{ url_for('static', filename='js/mind.js') }}"></script>
+</body>
+</html>
